@@ -10,9 +10,14 @@
 <body>
     <h1>Single Id</h1>
     <ul>
-        {% for id in all_heroes %}
-            <li> <h2> {{hero.id}} </h2> </li>
-            {% endfor %}
+        
+            <li> <h2>Id: {{single_hero.id}} </h2> </li>
+            <li> <h2>Name: {{single_hero.name}} </h2> </li>
+            <li> <h2>Alter Ego: {{single_hero.alter_ego}} </h2> </li>
+            <li> <h2>Primary Ability: {{single_hero.primary}} </h2> </li>
+            <li> <h2>Secondary Ability: {{single_hero.secondary}} </h2> </li>
+            <li> <h2>Catch Phrase: {{single_hero.catchphrase}} </h2> </li>
+            
     </ul>
 
 </body>
