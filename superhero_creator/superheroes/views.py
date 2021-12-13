@@ -48,3 +48,18 @@ def delete(request):
         return HttpResponseRedirect(reverse('superheroes:index'))
     else:
         return render(request, 'superheroes/delete.html')
+
+def edit(request):
+    if request.method == "POST":
+        # save the form contents as a new db object
+        # return to index
+        name = request.POST.get('name')
+        alter_ego = request.POST.get('alter_ego')
+        primary = request.POST.get('primary_ability')
+        secondary = request.POST.get('secondary_ability')
+        catchphrase = request.POST.get('catchphrase')
+        edit_hero.edit()
+        return HttpResponseRedirect(reverse('superheroes:index'))
+    else:
+        return render(request, 'superheroes/edit.html')
+    
